@@ -1,0 +1,170 @@
+.calendar {
+    width: 100%;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+}
+
+.calendar-header h2 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.nav-btn {
+    background-color: transparent;
+    color: #2c3e50;
+    font-size: 16px;
+    padding: 5px 10px;
+}
+
+.nav-btn:hover {
+    background-color: #e9ecef;
+}
+
+.calendar-grid {
+    display: flex;
+    overflow-x: auto;
+}
+
+.time-column {
+    min-width: 80px;
+    border-right: 1px solid #ddd;
+    flex-shrink: 0;
+}
+
+.day-column {
+    min-width: 150px;
+    flex: 1;
+    border-right: 1px solid #ddd;
+}
+
+.day-column:last-child {
+    border-right: none;
+}
+
+.day-header {
+    height: 60px;
+    padding: 10px;
+    text-align: center;
+    font-weight: 500;
+    border-bottom: 1px solid #ddd;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.day-header .date {
+    font-size: 12px;
+    color: #6c757d;
+    margin-top: 4px;
+}
+
+.time-slot {
+    height: 60px;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.time-column .time-slot {
+    justify-content: center;
+    font-size: 12px;
+    color: #6c757d;
+    cursor: default;
+}
+
+.time-slot:hover:not(.has-event):not(.time-column .time-slot) {
+    background-color: #f1f8ff;
+}
+
+.time-slot.has-event {
+    cursor: default;
+}
+
+.event-item {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    border-radius: 4px;
+    color: white;
+    font-size: 12px;
+    overflow: hidden;
+}
+
+.event-title {
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.event-time {
+    font-size: 10px;
+    opacity: 0.9;
+}
+
+/* Activity List Styles */
+.tabs {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+
+.tab {
+    padding: 8px 15px;
+    background-color: transparent;
+    border-bottom: 2px solid transparent;
+    margin-right: 5px;
+}
+
+.tab.active {
+    border-bottom-color: #2196F3;
+    color: #2196F3;
+}
+
+.add-form {
+    display: flex;
+    margin-bottom: 15px;
+    gap: 10px;
+}
+
+.add-form input {
+    flex: 1;
+}
+
+.add-form button {
+    background-color: #2196F3;
+    color: white;
+}
+
+.item-list {
+    list-style: none;
+}
+
+.item-list li {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.item-list li input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+.item-list li.completed span,
+.item-list li.visited span {
+    text-decoration: line-through;
+    color: #6c757d;
+}
